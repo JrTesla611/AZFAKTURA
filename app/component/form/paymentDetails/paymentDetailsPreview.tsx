@@ -33,12 +33,12 @@ export const PaymentDetailsPreview: React.FC<
       )}
       <div className="py-4 pl-10 pr-3">
         <p className="text-[11px] text-neutral-400 font-medium uppercase mb-3">
-          Bank Details
+          Bank təfərrüatları
         </p>
         <div className="space-y-1">
           <div className="grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
-              Bank Name
+              Bank adı
             </p>
             {bankName ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
@@ -50,7 +50,7 @@ export const PaymentDetailsPreview: React.FC<
           </div>
           <div className="mb-2 grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
-              Account Number
+              Hesab nömrəsi
             </p>
             {accountNumber ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
@@ -62,7 +62,7 @@ export const PaymentDetailsPreview: React.FC<
           </div>
           <div className="mb-2 grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
-              Account Name
+              Hesab Adı
             </p>
             {accountName ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
@@ -74,7 +74,7 @@ export const PaymentDetailsPreview: React.FC<
           </div>
           <div className="mb-2 grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
-              Swift Code
+              Swift kodu
             </p>
             {swiftCode ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
@@ -87,7 +87,7 @@ export const PaymentDetailsPreview: React.FC<
           {routingCode && (
             <div className="mb-2 grid grid-cols-2 items-center">
               <p className="truncate text-xs font-medium text-gray-500">
-                Routing Code
+                IBAN
               </p>
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {routingCode}
@@ -97,7 +97,7 @@ export const PaymentDetailsPreview: React.FC<
           {ifscCode && (
             <div className="mb-2 grid grid-cols-2 items-center">
               <p className="truncate text-xs font-medium text-gray-500">
-                IFSC Code
+                VÖEN
               </p>
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {ifscCode}
@@ -108,7 +108,7 @@ export const PaymentDetailsPreview: React.FC<
       </div>
       <div className="py-4 px-10">
         <p className="text-[11px] text-neutral-400 font-medium uppercase mb-3">
-          Payable in
+          Ödəniş valyutası
         </p>
         {currencyDetails && (
           <div className="flex gap-2 justify-between items-center w-full">

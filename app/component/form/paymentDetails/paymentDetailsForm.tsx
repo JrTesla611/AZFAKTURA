@@ -3,35 +3,35 @@ import CustomNumberInput from "@/app/component/ui/customNumberInput";
 
 export const PaymentDetailsForm = () => (
   <div className="pt-24">
-    <p className="text-2xl font-semibold pb-3">Payment Details</p>
+    <p className="text-2xl font-semibold pb-3">Ödəniş təfərrüatları</p>
     <CustomTextInput
-      label="Bank name"
-      placeholder="HSBC"
+      label="Bank Adı"
+      placeholder="-"
       variableName="bankName"
     />
     <CustomTextInput
-      label="Account number"
-      placeholder="8920804195"
+      label="Hesab nömrəsi"
+      placeholder="----------"
       variableName="accountNumber"
     />
     <CustomTextInput
-      label="Account Name"
-      placeholder="Pranav"
+      label="Hesab Adı"
+      placeholder="-"
       variableName="accountName"
     />
     <CustomTextInput
-      label="IFSC code"
-      placeholder="HSBC0560002"
+      label="VÖEN kodu"
+      placeholder="-"
       variableName="ifscCode"
     />
     <CustomTextInput
-      label="Routing number"
-      placeholder="0804189592"
+      label="IBAN"
+      placeholder="---- ---- ---- ----"
       variableName="routingCode"
     />
     <CustomNumberInput
-      label="Swift code"
-      placeholder="HSBCINAA123"
+      label="Swift Kodu"
+      placeholder="-"
       variableName="swiftCode"
     />
   </div>

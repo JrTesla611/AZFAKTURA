@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 export const InvoiceDetailsPreview: React.FC<
   InvoiceItemDetails & { onClick?: (step: string) => void }
-> = ({ note, discount, taxRate, items, currency = "INR", onClick }) => {
+> = ({ note, discount, taxRate, items, currency = "AZN", onClick }) => {
   const currencyType = currency;
   const currencyDetails = currencyList.find(
     (currency) => currency.value.toLowerCase() === currencyType.toLowerCase()
@@ -31,23 +31,23 @@ export const InvoiceDetailsPreview: React.FC<
       <div className="grid grid-cols-2 items-center">
         <div className="py-4 px-10">
           <p className="text-[11px] text-neutral-400 font-medium uppercase">
-            Description
+            Təsvir
           </p>
         </div>
         <div className="py-4 px-10 grid grid-cols-3 items-center">
           <div>
             <p className="text-[11px] text-neutral-400 font-medium uppercase">
-              QTY
+             Kəmiyyət
             </p>
           </div>
           <div>
             <p className="text-[11px] text-neutral-400 font-medium uppercase">
-              Price
+              Qiymət
             </p>
           </div>
           <div>
             <p className="text-[11px] text-neutral-400 font-medium uppercase text-right">
-              Amount
+              Məbləğ
             </p>
           </div>
         </div>
@@ -80,7 +80,7 @@ export const InvoiceDetailsPreview: React.FC<
         {note ? (
           <div className="pt-6 pb-4">
             <p className="flex truncate text-xs font-medium text-neutral-400 pb-1 px-10">
-              Note
+             Qeyd
             </p>
             <p className="text-xs font-medium text-neutral-400 px-10 break-words">
               {note}
@@ -90,7 +90,7 @@ export const InvoiceDetailsPreview: React.FC<
           <div />
         )}
         <div>
-          <div className="flex justify-between items-center mx-10 border-b border-dashed py-3">
+          {/* <div className="flex justify-between items-center mx-10 border-b border-dashed py-3">
             <p className="flex truncate text-xs font-medium text-gray-600">
               Subtotal
             </p>
@@ -98,11 +98,11 @@ export const InvoiceDetailsPreview: React.FC<
               {currencyDetails?.currencySymbol}
               {addCommasToNumber(subtotal)}
             </p>
-          </div>
+          </div> */}
           {discount && (
             <div className="flex justify-between items-center mx-10 border-b border-dashed py-3">
               <p className="flex truncate text-xs font-medium text-gray-600">
-                Discount
+                Endirim
               </p>
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {currencyDetails?.currencySymbol}
@@ -113,7 +113,7 @@ export const InvoiceDetailsPreview: React.FC<
           {taxRate && (
             <div className="flex justify-between items-center mx-10 border-b border-dashed py-3">
               <p className="flex truncate text-xs font-medium text-gray-600">
-                Tax ({taxRate})%
+                Vergi ({taxRate})%
               </p>
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {currencyDetails?.currencySymbol}
@@ -124,7 +124,7 @@ export const InvoiceDetailsPreview: React.FC<
           <div className="flex justify-between items-center px-10 py-3">
             <div>
               <p className="flex truncate text-xs font-medium text-gray-600">
-                Amount
+               Məbləğ
               </p>
             </div>
             <p className="flex truncate text-md font-medium">

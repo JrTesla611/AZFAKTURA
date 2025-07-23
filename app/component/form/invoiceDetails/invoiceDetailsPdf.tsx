@@ -23,7 +23,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
     <View>
       <View style={pdfUtils.flexRowItemCenter}>
         <View style={{ flex: 1, paddingHorizontal: 40, paddingVertical: 16 }}>
-          <Text style={pdfTypography.title}>Description</Text>
+          <Text style={pdfTypography.title}>Təsvir</Text>
         </View>
         <View
           style={{
@@ -34,13 +34,13 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
           }}
         >
           <View style={{ flex: 1 }}>
-            <Text style={pdfTypography.title}>QTY</Text>
+            <Text style={pdfTypography.title}>Kəmiyyət</Text>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={pdfTypography.title}>Price</Text>
+            <Text style={pdfTypography.title}>Qiymət</Text>
           </View>
           <View style={{ flex: 1, textAlign: "right" }}>
-            <Text style={pdfTypography.title}>Amount</Text>
+            <Text style={pdfTypography.title}>Məbləğ</Text>
           </View>
         </View>
       </View>
@@ -95,7 +95,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
         <View style={{ flex: 1, paddingTop: 24 }}>
           {note && (
             <View style={{ paddingHorizontal: 40 }}>
-              <Text style={pdfTypography.title}>Note</Text>
+              <Text style={pdfTypography.title}>Qeyd</Text>
               <Text style={pdfTypography.itemDescription}>{note}</Text>
             </View>
           )}
@@ -109,9 +109,6 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
               ...pdfUtils.borderBottom,
             }}
           >
-            <Text style={{ ...pdfTypography.itemDescription, flex: 1 }}>
-              Subtotal
-            </Text>
             <Text
               style={{
                 ...pdfTypography.itemDescription,
@@ -133,7 +130,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
               }}
             >
               <Text style={{ ...pdfTypography.itemDescription, flex: 1 }}>
-                Discount
+                Endirim
               </Text>
               <Text
                 style={{
@@ -157,7 +154,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
               }}
             >
               <Text style={{ ...pdfTypography.itemDescription, flex: 1 }}>
-                Tax ({taxRate})%
+                Vergi ({taxRate})%
               </Text>
               <Text
                 style={{
@@ -179,7 +176,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
             }}
           >
             <Text style={{ ...pdfTypography.itemDescription, flex: 1 }}>
-              Amount
+              Məbləğ
             </Text>
             <Text
               style={{ ...pdfTypography.amount, textAlign: "right", flex: 1 }}

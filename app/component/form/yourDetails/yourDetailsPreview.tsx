@@ -14,7 +14,7 @@ export const YourDetailsPreview: React.FC<YourDetails> = ({
 }) => (
   <div>
     <p className="text-[11px] text-neutral-400 font-semibold uppercase pb-3.5">
-      From
+      Kimdən
     </p>
     <div className="h-10 mb-3">
       {yourLogo ? (
@@ -51,7 +51,7 @@ export const YourDetailsPreview: React.FC<YourDetails> = ({
       ) : (
         <div className="rounded-md bg-neutral-100 h-4 w-3/6 animate-pulse my-2" />
       )}
-      {yourTaxId && <p>Tax ID:{yourTaxId}</p>}
+      {yourTaxId && <p>VÖEN:{yourTaxId}</p>}
     </div>
   </div>
 );

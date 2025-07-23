@@ -33,56 +33,56 @@ export const FormSteps = () => {
 const step1 = {
   previous: null,
   nextStep: {
-    title: "Company Details",
+    title: "Şirkət Təfərrüatları",
     step: "2",
   },
 };
 
 const step2 = {
   previous: {
-    title: "Your Details",
+    title: "Detallarınız",
     step: "1",
   },
   nextStep: {
-    title: "Invoice details",
+    title: "Faktura təfərrüatları",
     step: "3",
   },
 };
 const step3 = {
   previous: {
-    title: "Your details",
+    title: "Detallarınız",
     step: "2",
   },
   nextStep: {
-    title: "Payment Details",
+    title: "Ödəniş təfərrüatları",
     step: "4",
   },
 };
 const step4 = {
   previous: {
-    title: "Invoice details",
+    title: "Faktura təfərrüatları",
     step: "3",
   },
   nextStep: {
-    title: "Invoice Terms",
+    title: "Faktura şərtləri",
     step: "5",
   },
 };
 
 const step5 = {
   previous: {
-    title: "Payment Details",
+    title: "Ödəniş təfərrüatları",
     step: "4",
   },
   nextStep: {
-    title: "Review & download",
+    title: "Nəzərdən keçirin və endirin",
     step: "6",
   },
 };
 
 const step6 = {
   previous: {
-    title: "Invoice terms",
+    title: "Faktura şərtləri",
     step: "5",
   },
   nextStep: null,

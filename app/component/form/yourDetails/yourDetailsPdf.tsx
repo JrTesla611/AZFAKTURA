@@ -18,7 +18,7 @@ export const YourDetailsPDF: React.FC<YourDetails> = ({
   yourZip,
 }) => (
   <View style={pdfContainers.YourDetails}>
-    <Text style={{ ...pdfTypography.title, marginBottom: 14 }}>From</Text>
+    <Text style={{ ...pdfTypography.title, marginBottom: 14 }}>Kimdən</Text>
 
     <View style={pdfContainers.imageContainer}>
       {yourLogo && (
@@ -39,7 +39,7 @@ export const YourDetailsPDF: React.FC<YourDetails> = ({
         </Text>
       )}
       {yourCountry && <Text style={{ marginBottom: 4 }}>{yourCountry}</Text>}
-      {yourTaxId && <Text>Tax ID:{yourTaxId}</Text>}
+      {yourTaxId && <Text>VÖEN{yourTaxId}</Text>}
     </View>
   </View>
 );

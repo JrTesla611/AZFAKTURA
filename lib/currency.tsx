@@ -15,6 +15,7 @@ import {
   GB,
   FlagComponent,
   ID,
+  AZ,
 } from "country-flag-icons/react/1x1";
 
 export const currencyList: {
@@ -207,6 +208,18 @@ export const currencyList: {
       currencyShortForm: "IDR",
       icon: ID,
       iconName: "ID",
+    },
+  },
+    {
+    value: "AZN",
+    label: "AZN",
+    details: {
+      country: "Azerbaijan",
+      currencySymbol: "₼",
+      currencyName: "Azerbaijani Manat",
+      currencyShortForm: "AZN",
+      icon: AZ,
+      iconName: "AZ",
     },
   },
 ];

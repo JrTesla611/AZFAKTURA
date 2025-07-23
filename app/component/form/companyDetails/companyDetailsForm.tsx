@@ -4,50 +4,45 @@ import ImageInput from "@/app/component/ui/imageInput";
 
 export const CompanyDetailsForm = () => (
   <div className="pt-24">
-    <p className="text-2xl font-semibold pb-3">Company Details (To)</p>
+    <p className="text-2xl font-semibold pb-3">Şirkət Təfərrüatları (Kimə)</p>
     <CustomTextInput
       label="Email"
-      placeholder="e.g. pranav@prolab.sh"
+      placeholder="name@example.com"
       variableName="email"
     />
     <p className="pb-10 pt-3 text-xs font-medium text-neutral-500">
-      We&apos;ll fill the billing details automatically if we find the company.
+      Şirkəti tapsaq, faktura təfərrüatlarını avtomatik dolduracağıq.
     </p>
-    <p className="pb-2 text-sm font-medium text-neutral-500">Billing details</p>
+    <p className="pb-2 text-sm font-medium text-neutral-500">Faktura təfərrüatları</p>
     <CustomTextInput
-      label="Company name"
-      placeholder="Prolab Inc"
+      label="Şirkət adı"
+      placeholder="AZFAKTURA"
       variableName="companyName"
     />
     <ImageInput label="Logo" variableName="companyLogo" />
     <CustomTextInput
-      label="Address"
-      placeholder="Whitefield Circle,12"
+      label="Məkan"
+      placeholder=""
       variableName="companyAddress"
     />
     <CustomTextInput
-      label="City"
-      placeholder="Bangalore"
+      label="Şəhər"
+      placeholder=""
       variableName="companyCity"
-    />
-    <CustomTextInput
-      label="State"
-      placeholder="Karnataka"
-      variableName="companyState"
     />
     <CustomNumberInput
       label="Zip"
-      placeholder="560066"
+      placeholder=""
       variableName="companyZip"
     />
     <CustomTextInput
-      label="Country"
-      placeholder="India"
+      label="Ölkə"
+      placeholder=""
       variableName="companyCountry"
     />
     <CustomTextInput
-      label="Tax ID"
-      placeholder="GSTIN 1234"
+      label="VÖEN"
+      placeholder=""
       variableName="companyTaxId"
     />
   </div>

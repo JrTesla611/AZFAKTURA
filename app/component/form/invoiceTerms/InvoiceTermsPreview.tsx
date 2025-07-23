@@ -18,14 +18,14 @@ export const InvoiceTermsPreview: React.FC<
     )}
     <div>
       <p className="text-[11px] text-neutral-400 font-semibold uppercase">
-        Invoice NO
+        Faktura NO
       </p>
       <p className="font-medium text-xs">{invoiceNumber}</p>
     </div>
     <div className="flex items-center justify-between pl-10">
       <div>
         <p className="text-[11px] text-neutral-400 font-semibold uppercase">
-          Issued
+          Buraxılmışdır
         </p>
         <p className="font-medium text-xs">
           {issueDate ? format(issueDate, "do MMM yyyy'") : ""}
@@ -33,7 +33,7 @@ export const InvoiceTermsPreview: React.FC<
       </div>
       <div>
         <p className="text-[11px] text-neutral-400 font-semibold uppercase text-right">
-          Due Date
+          Son tarix
         </p>
         <p className="font-medium text-xs">
           {dueDate ? format(dueDate, "do MMM yyyy'") : ""}

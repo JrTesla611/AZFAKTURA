@@ -15,7 +15,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
   routingCode,
   swiftCode,
   ifscCode,
-  currency = "INR",
+  currency = "AZN",
   countryImageUrl,
 }) => {
   const currencyDetails = currencyList.find(
@@ -40,11 +40,11 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
         }}
       >
         <Text style={{ paddingBottom: 12, ...pdfTypography.title }}>
-          Bank Details
+          Bank təfərrüatları
         </Text>
         <View style={{ flexDirection: "column", gap: 5 }}>
           <View style={pdfUtils.flexRowItemCenter}>
-            <Text style={pdfTypography.paymentTitle}>Bank Name</Text>
+            <Text style={pdfTypography.paymentTitle}>Bank adı</Text>
             <Text
               style={{
                 flex: 1,
@@ -56,7 +56,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             </Text>
           </View>
           <View style={pdfUtils.flexRowItemCenter}>
-            <Text style={pdfTypography.paymentTitle}>Account Number</Text>
+            <Text style={pdfTypography.paymentTitle}>Hesab nömrəsi</Text>
             <Text
               style={{
                 flex: 1,
@@ -68,7 +68,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             </Text>
           </View>
           <View style={pdfUtils.flexRowItemCenter}>
-            <Text style={pdfTypography.paymentTitle}>Account Name</Text>
+            <Text style={pdfTypography.paymentTitle}>Hesab Adı</Text>
             <Text
               style={{
                 flex: 1,
@@ -80,7 +80,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             </Text>
           </View>
           <View style={pdfUtils.flexRowItemCenter}>
-            <Text style={pdfTypography.paymentTitle}>Swift Code</Text>
+            <Text style={pdfTypography.paymentTitle}>Swift Kodu</Text>
             <Text
               style={{
                 flex: 1,
@@ -93,7 +93,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
           </View>
           {ifscCode ? (
             <View style={pdfUtils.flexRowItemCenter}>
-              <Text style={pdfTypography.paymentTitle}>IFSC Code</Text>
+              <Text style={pdfTypography.paymentTitle}>VÖEN</Text>
               <Text
                 style={{
                   flex: 1,
@@ -107,7 +107,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
           ) : undefined}
           {routingCode ? (
             <View style={pdfUtils.flexRowItemCenter}>
-              <Text style={pdfTypography.paymentTitle}>Routing Code</Text>
+              <Text style={pdfTypography.paymentTitle}>IBAN</Text>
               <Text
                 style={{
                   flex: 1,
@@ -131,7 +131,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
         }}
       >
         <Text style={{ ...pdfTypography.title, paddingBottom: 12 }}>
-          Payable in
+          Ödəniş valyutası
         </Text>
         {currencyDetails && (
           <View style={{ ...pdfUtils.flexRowItemCenter, gap: 8 }}>

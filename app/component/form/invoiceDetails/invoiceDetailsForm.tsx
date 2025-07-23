@@ -10,7 +10,7 @@ import { Controller } from "react-hook-form";
 import { getItemValue } from "@/lib/getInitialValue";
 
 export const InvoiceDetailsForm = () => {
-  const value = useGetValue("currency", "INR");
+  const value = useGetValue("currency", "AZN");
   const currencyDetails = currencyList.find(
     (currency) => currency.value.toLowerCase() === value.toLowerCase()
   )?.details;
@@ -19,16 +19,16 @@ export const InvoiceDetailsForm = () => {
     <Controller
       render={({ field: { onChange, value } }) => (
         <div className="pt-24">
-          <p className="text-2xl font-semibold pb-3">Invoice Details</p>
+          <p className="text-2xl font-semibold pb-3">Faktura Detalları</p>
           <div className="flex flex-col gap-6">
             <div>
               <p className="pt-3 font-medium text-neutral-500">
-                Select an invoice currency
+                Faktura valyutasını seçin
               </p>
               <CurrencyInput />
             </div>
             <div>
-              <p className="py-3 font-medium text-sm text-neutral-500">Items</p>
+              <p className="py-3 font-medium text-sm text-neutral-500">Məhsul(lar)</p>
               {value.map(
                 ({ itemDescription, amount, qty }: Item, index: number) => (
                   <div
@@ -144,27 +144,27 @@ export const InvoiceDetailsForm = () => {
                   className="flex justify-center items-center text-orange-500 font-medium text-sm gap-2"
                 >
                   <Plus className="w-4 h-4" />
-                  <p>Add Item</p>
+                  <p>Məhsul əlavə edin</p>
                 </button>
               </div>
             </div>
             <div>
               <p className="pt-3 font-medium text-sm text-neutral-500 pb-5">
-                Note
+                Qeyd
               </p>
-              <CustomTextInput placeholder="Add a note" variableName="note" />
+              <CustomTextInput placeholder="Add a note" variableName="Qeyd" />
             </div>
             <div>
               <p className="pt-3 font-medium text-sm text-neutral-500 pb-5">
-                More options
+                Daha çox seçim
               </p>
               <CustomNumberInput
-                label="Discount"
+                label="Endirim"
                 placeholder={`${currencyDetails?.currencySymbol}0`}
                 variableName="discount"
               />
               <CustomNumberInput
-                label="Taxes"
+                label="Vergilər"
                 placeholder="0%"
                 variableName="tax"
               />

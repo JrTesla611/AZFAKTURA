@@ -4,13 +4,13 @@ import DateInput from "@/app/component/ui/dateInput";
 
 export const InvoiceTermsForm = () => (
   <div className="pt-24">
-    <p className="text-2xl font-semibold pb-3">Invoice terms</p>
+    <p className="text-2xl font-semibold pb-3">Faktura şərtləri</p>
     <CustomTextInput
-      label="Invoice number"
+      label="Faktura nömrəsi"
       placeholder="INVOICE-01"
       variableName="invoiceNo"
     />
-    <DateInput label="Issue date" variableName="issueDate" />
-    <DateInput label="Due date" variableName="dueDate" />
+    <DateInput label="Buraxılış tarixi" variableName="issueDate" />
+    <DateInput label="Son tarix" variableName="dueDate" />
   </div>
 );
